@@ -1,5 +1,12 @@
 export const initialState = {
-    cart:[]
+    cart:[{
+        id:"434",
+        title: "hat",
+        price: 667.90,
+        rating:4,
+        image:""
+    }],
+    user:null,
 };
 
 const reducer = (state, action) => {
