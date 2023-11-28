@@ -1,14 +1,16 @@
 import React from 'react'
 import "./Header.css"
-import logo from "./header_logo.png"
 import {Link} from "react-router-dom"
 import SearchIcon from "@mui/icons-material/Search"
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket"
+
+
 function Header() {
   return (
     <nav className="header">   
     {/*logo on the left add amazon logo*/}
         <Link to = "/">
-    <img classname = "header_logo" src ={logo} alt ="header_logo"/>
+    <img classname = "header_logo" src ="https://www.amazon.com/ref=nav_logo" alt ="header_logo"/>
         </Link>
 
     {/*Search bar*/}
@@ -20,16 +22,42 @@ function Header() {
     {/*Three link on the right*/}
     <div className="header_nav">
         {/*1st link */}
-
+            <Link to = "/login" className="header_link">
+                <div className="header_option">
+                    <span className="header_optionLineOne">Hello</span>
+                    <span className="header_optionLineTwo">Sign In</span>
+                </div>
+            </Link>
+\
         {/*2nd link */}
+            <Link to= "/" className="header_link">
+                <div className="header_option">
+                    <span className="header_optionLineOne">Returns</span>
+                    <span className="header_optionLineTwo">& Orders</span>
+                </div>
+            </Link>
 
          {/*3rd link */}
+            <Link to = "/" className="header_link">
+                <div className="header_option">
+                    <span className="header_optionLineOne">Your</span>
+                    <span className="header_optionLineTwo">Prime</span>
+                </div>
+            </Link>
 
     </div>
-    {/*Checkout icon with number of items*/}
 
+    {/*Checkout icon with number of items*/}
+    <Link to = "/checkout" className="header_link">
+        <div className="header_optionBasket">
+            {/*Checkout Basket */}
+            <ShoppingBasketIcon/>
+            {/*Number of items */}
+            <span className="header_basketCount" >0</span>
+        </div>
+    </Link>
     </nav>
-  )
+  );
 }
 
 export default Header;
