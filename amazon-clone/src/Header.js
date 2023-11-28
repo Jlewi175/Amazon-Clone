@@ -3,9 +3,15 @@ import "./Header.css"
 import {Link} from "react-router-dom"
 import SearchIcon from "@mui/icons-material/Search"
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket"
+import { useStateValue } from './StateProvider'
 
 
 function Header() {
+
+const[{cart}] = useStateValue();
+
+console.log(cart);
+
   return (
     <nav className="header">   
     {/*logo on the left add amazon logo*/}
@@ -53,7 +59,7 @@ function Header() {
             {/*Checkout Basket */}
             <ShoppingBasketIcon/>
             {/*Number of items */}
-            <span className="header_basketCount" >0</span>
+            <span className="header_basketCount" >{cart?.length}</span>
         </div>
     </Link>
     </nav>
