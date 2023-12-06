@@ -13,7 +13,7 @@ function Home() {
     </div>
 
     <div className="home_row">
-    <Product id = "122" title = {"hat"} price = {20.99} rating= {5} image = "https://m.media-amazon.com/images/I/41cO0GJ53LL._AC_UF452,452_FMjpg_.jpg"/>
+    <Product id = "122" title = "hat" price = {20.99} rating= {5} image = "https://m.media-amazon.com/images/I/41cO0GJ53LL._AC_UF452,452_FMjpg_.jpg"/>
     <Product id = "122" title = "hat" price = {20.99} rating= {5} image = "https://m.media-amazon.com/images/I/41cO0GJ53LL._AC_UF452,452_FMjpg_.jpg"/>
     <Product id = "122" title = "hat" price = {20.99} rating= {5} image = "https://m.media-amazon.com/images/I/41cO0GJ53LL._AC_UF452,452_FMjpg_.jpg"/>
 

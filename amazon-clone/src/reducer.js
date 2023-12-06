@@ -1,7 +1,7 @@
 export const initialState = {
     cart:[{
         id:"434",
-        title: "hat",
+        title: "bean bag",
         price: 667.90,
         rating:4,
         image:""
